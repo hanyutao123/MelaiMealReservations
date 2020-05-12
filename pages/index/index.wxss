@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.container {
+  height: 100%;
+  background-color: #f5f6f8;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+
+.map_section {
+  width: 150rpx;
+  margin: 20rpx 0 0 20rpx;
+  display: inline-flex;
+}
+
+.map_icon {
+  width: 50rpx;
+  display: inline;
+}
+
+.map_picker {
+  font-size: 20px;
+  color: #ee7f63;
+  margin-left: 4rpx;
+}
+
+.order_info {
+  width: 80%;
+  background-color: #ffffff;
+  margin: 40rpx auto 0;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+text{line-height: 1.5;}
+.order_info1 {
+  color: #060606;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.order_info2 {
+  color: #646464;
+  font-size: 18px;
+}
+
+
+.order_btn {
+  width: 80%;
+  background-color: #ee7f63;
+}

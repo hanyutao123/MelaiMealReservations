@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+	<cover-image src="../images/index_38.jpg"> </cover-image>
+	<view class="map_section">
+		<cover-image class="map_icon" src="../images/map.png"> </cover-image>
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<view class="map_picker">
+				{{array[index]}}
+			</view>
+		</picker>
+	</view>
+  <view class="order_info">
+    <text class="order_info1">配餐说明</text>
+    <text class="order_info2">1.目前仅支持北京美莱员工使用配餐预定功能</text>
+     <button type="primary" class="order_btn">点击预定</button>
+  </view>
+	<view class="userinfo">
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	</view>
+</view>
