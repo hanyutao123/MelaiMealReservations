@@ -1,0 +1,21 @@
+<!--logs.wxml-->
+<!--index.wxml-->
+<view class="container">
+	<view class="header-view">
+		<navigator url="/pages/index/index" class="left-icon">
+			<cover-image src="../images/left.png"></cover-image>
+		</navigator>
+		<view class="date-view">
+			<cover-image src="../images/date.png" class="date-icon" bindtap='showDatePickerPlus'></cover-image>
+			<view >日期:{{dateInfo.dateStr}}</view>
+		</view>
+		<datepicker-plus bind:submit='submit' showDatePickerPlus='{{show}}' initDate="2018-02-12"></datepicker-plus>
+	</view>
+	<view class="food-info">
+		<view></view>
+	</view>
+	<view class="userinfo">
+		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	</view>
+</view>

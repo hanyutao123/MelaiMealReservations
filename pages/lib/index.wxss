@@ -1,0 +1,18 @@
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50rpx auto 0;
+    background-color: #ffffff;
+    padding: 30rpx 0;
+  }
+  
+  .logo {
+    width: 50%;
+  }
+  
+  .userinfo-nickname {
+    font-size: 16px;
+    line-height: 70rpx;
+    color: #646464;
+  }

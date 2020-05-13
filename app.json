@@ -1,17 +1,20 @@
 {
-  "pages":[
-    
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/test/test"
-
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ccc",
-    "navigationBarTitleText": "配餐预定",
-    "navigationBarTextStyle":"black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/order/order",
+        "pages/index/index",
+        "pages/logs/logs",
+        
+        "pages/test/test",
+        "pages/detaileddesc/detaileddesc",
+        "pages/feedback/feedback",
+        "pages/tab/abb"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#902bc3",
+        "navigationBarTitleText": "美莱配餐预定",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }
