@@ -7,13 +7,46 @@
 		</navigator>
 		<view class="date-view">
 			<cover-image src="../images/date.png" class="date-icon" bindtap='showDatePickerPlus'></cover-image>
-			<view >日期:{{dateInfo.dateStr}}</view>
+			<view>{{dateInfo.dateStr}}</view>
 		</view>
-		<datepicker-plus bind:submit='submit' showDatePickerPlus='{{show}}' initDate="2018-02-12"></datepicker-plus>
+		<datepicker-plus bind:submit='submit' showDatePickerPlus='{{show}}' initDate="2020-05-12"></datepicker-plus>
 	</view>
 	<view class="food-info">
-		<view></view>
+		<view>早餐</view>
+		<view class="mune-order">
+			<view class="breaMune">
+				{{ BreaMenu.BreaMenu1}} 
+				{{BreaMenu.BreaMenu2}} + {{BreaMenu.BreaMenu3}} + {{BreaMenu.BreaMenu4 }}
+			</view>
+			<view class="body-view">
+				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+			</view>
+		</view>
 	</view>
+	<view class="food-info">
+		<view>午餐</view>
+		<view class="mune-order">
+			<view class="lunchMune">
+				{{ LunchMenu.LunchMenu1}} + {{LunchMenu.LunchMenu2}} + {{LunchMenu.LunchMenu3}} + {{LunchMenu.LunchMenu4 }}
+			</view>
+			<view class="body-view">
+				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+			</view>
+		</view>
+	</view>
+
+	<view class="food-info">
+		<view>晚餐</view>
+		<view class="mune-order">
+			<view class="DinnerMune">
+				{{ DinnerMenu.DinnerMenu1}} + {{DinnerMenu.DinnerMenu2}} 
+			</view>
+			<view class="body-view">
+				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+			</view>
+		</view>
+	</view>
+	<button class="order_btn">点击预定</button>
 	<view class="userinfo">
 		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
 		<text class="userinfo-nickname">{{userInfo.nickName}}</text>

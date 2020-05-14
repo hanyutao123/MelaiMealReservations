@@ -1,8 +1,25 @@
-.log-list {
+
+.container {
+  height: 100%;
+  box-sizing: border-box;
+}
+.canteen-info {
+  padding: 20rpx;margin-top: 100rpx;
+  text-align: justify;background-color: #ffffff;
+
+}
+.title {text-align: center;margin: 20rpx auto 20rpx}
+.cont {text-indent: 2em;color: #646464;}
+
+.userinfo {
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  align-items: center;
+  margin: 150rpx auto 0;
+  background-color: #ffffff;
+  padding: 30rpx 0;
 }
-.log-item {
-  margin: 10rpx;
+
+.logo {
+  width: 50%;
 }

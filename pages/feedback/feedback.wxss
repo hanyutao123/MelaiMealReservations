@@ -1,8 +1,32 @@
-.log-list {
+.container {
+  background-color: #f5f6f8;
+  
+}
+textarea {width: 90%; text-align: justify;font-size: 18px;line-height: 2;background-color: #ffffff;padding: 5%;}
+button {width: 94%;margin: 10rpx auto 0;}
+.page-bd {
+  background-color: #ffffff;padding: 50rpx;
+}
+
+.image {
+  width: 100px;height: 100px;
+}
+
+.order_btn {
+  width: 90%;margin: 50rpx auto 0;
+  background-color: #902bc3;
+  color: #ffffff;
+}
+
+.userinfo {
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  align-items: center;
+  margin: 50rpx auto 0;
+  background-color: #ffffff;
+  padding: 30rpx 0;
 }
-.log-item {
-  margin: 10rpx;
+
+.logo {
+  width: 50%;
 }

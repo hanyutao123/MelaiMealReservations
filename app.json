@@ -1,9 +1,9 @@
 {
     "pages": [
-        "pages/order/order",
+        
         "pages/index/index",
         "pages/logs/logs",
-        
+        "pages/order/order",
         "pages/test/test",
         "pages/detaileddesc/detaileddesc",
         "pages/feedback/feedback",

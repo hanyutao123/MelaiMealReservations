@@ -22,10 +22,11 @@ Page({
         name: '日本'
       }
     ],
-    index: 0,
+    index: 1,
     bindPickerChange: function (e) {
       this.setData({
-        index: e.detail.value
+        index: e.detail.value,
+        console:log(this.data)
       })
     },
   },

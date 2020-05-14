@@ -1,6 +1,30 @@
 <!--logs.wxml-->
 <view class="container log-list">
-  
-    <text class="log-item">我的预定</text>
+	<view class="canteen-info">
+		<view class="title"><text>北京美莱饭米粒职工食堂简介</text></view>
+		<view class="cont">
+			<text>公司为确保员工福利，方便广大员工就餐，特开设了员工福利食堂，至今已有十余年。余个，为员工提供日常饭菜，食堂本着饭菜的色、香、味、型俱佳，花色品种繁多，口味多样，档次质量更胜一筹的原则，满足来自全国不同地区员工的饮食习惯</text>
+
+		</view>
+		<view>
+			<text>
+                每日就餐时间安排：
+            </text>
+		</view>
+        <view>
+        早餐 7：30--8：45
+        </view>
+        <view>
+        午餐 11：30--13：30
+        </view>
+        <view>
+        晚餐 17：30--19：00
+        </view>
+
+	</view>
+	<view class="userinfo">
+		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
+		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	</view>
 
 </view>

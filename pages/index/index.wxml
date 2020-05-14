@@ -9,20 +9,24 @@
 			</view>
 		</picker>
 	</view>
-  <view class="order_info">
-    <text class="order_info1">配餐说明</text>
-    <text class="order_info2">1.目前仅支持北京美莱员工使用配餐预定功能</text>
-	<text class="order_info2">2.每日10：00-13：00可预定当日午餐，14：30-18：30可预订当日晚餐。</text>
-	<text class="order_info2">3.每日午/晚餐均可选择堂食或者打包（打包时无法选择菜品）。</text>
-	<text class="order_info2">4.早餐需在8：45之前直接在食堂领取或堂食即可，无需预定。</text>
-	<text class="order_info2">5.疫情期间特殊供餐，无法覆盖特殊饮食需求，请大家见谅。</text>
-     <button class="order_btn">点击预定</button>
-	 <view class="nav">
-	 	<navigator url="/pages/order/order" open-type="redirect" hover-class="other-navigator-hover">我的预定</navigator>
-		 <navigator url="/pages/detaileddesc/detaileddesc">意见反馈</navigator>
-		 <navigator url="/pages/feedback/feedback">详细说明</navigator>
-	 </view>
-  </view>
+	<view class="order_info">
+		<text class="order_info1">配餐说明</text>
+		<text class="order_info2">1.目前仅支持北京美莱员工使用配餐预定功能</text>
+		<text class="order_info2">2.每日10：00-13：00可预定当日午餐，14：30-18：30可预订当日晚餐。</text>
+		<text class="order_info2">3.每日午/晚餐均可选择堂食或者打包（打包时无法选择菜品）。</text>
+		<text class="order_info2">4.早餐需在8：45之前直接在食堂领取或堂食即可，无需预定。</text>
+		<text class="order_info2">5.疫情期间特殊供餐，无法覆盖特殊饮食需求，请大家见谅。</text>
+		<navigator url="/pages/order/order">
+			<button class="order_btn">点击预定</button>
+		</navigator>
+
+		<view class="nav">
+			<navigator url="/pages/order/order" open-type="redirect" hover-class="other-navigator-hover">我的预定</navigator>
+			<navigator url="/pages/feedback/feedback">意见反馈</navigator>
+			<navigator url="/pages/detaileddesc/detaileddesc">详细说明</navigator>
+
+		</view>
+	</view>
 	<view class="userinfo">
 		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
 		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
