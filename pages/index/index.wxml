@@ -3,19 +3,18 @@
 	<cover-image src="../images/index_38.jpg"> </cover-image>
 	<view class="map_section">
 		<cover-image class="map_icon" src="../images/map.png"> </cover-image>
-		<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+		<picker bindchange="bindPickerChange" range="{{cityInfo}}" range-key="city_name" value="{{city_id}}">
 			<view class="map_picker">
-				{{array[index]}}
+				{{cityInfo[city_id].city_name}}
 			</view>
 		</picker>
 	</view>
 	<view class="order_info">
 		<text class="order_info1">配餐说明</text>
-		<text class="order_info2">1.目前仅支持北京美莱员工使用配餐预定功能</text>
-		<text class="order_info2">2.每日10：00-13：00可预定当日午餐，14：30-18：30可预订当日晚餐。</text>
-		<text class="order_info2">3.每日午/晚餐均可选择堂食或者打包（打包时无法选择菜品）。</text>
-		<text class="order_info2">4.早餐需在8：45之前直接在食堂领取或堂食即可，无需预定。</text>
-		<text class="order_info2">5.疫情期间特殊供餐，无法覆盖特殊饮食需求，请大家见谅。</text>
+		<text class="order_info2" wx:for="{{noteInfo}}" >
+			<block wx:if="{{ item.show}}">{{item.id}}.{{item.note}}</block> 
+		</text>
+
 		<navigator url="/pages/order/order">
 			<button class="order_btn">点击预定</button>
 		</navigator>

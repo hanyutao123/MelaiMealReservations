@@ -7,7 +7,7 @@
 }
 
 .map_section {
-  width: 150rpx;
+  width: 200rpx;
   margin: 20rpx 0 0 20rpx;
   display: inline-flex;
 }

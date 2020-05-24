@@ -7,23 +7,23 @@
 		</navigator>
 		<view class="date-view">
 			<cover-image src="../images/date.png" class="date-icon" bindtap='showDatePickerPlus'></cover-image>
-			<view>{{dateInfo.dateStr}}</view>
+			<view>{{dateInfo}}</view>
 		</view>
 		<datepicker-plus bind:submit='submit' showDatePickerPlus='{{show}}' initDate="2020-05-12"></datepicker-plus>
 	</view>
-	<view class="food-info">
-		<view>早餐</view>
+	<view class="food-info" wx:for="{{FMLMenu}}">
+		<view class="Munetype">{{item.type}}————用餐时间{{item.time}}</view>
 		<view class="mune-order">
-			<view class="breaMune">
-				{{ BreaMenu.BreaMenu1}} 
-				{{BreaMenu.BreaMenu2}} + {{BreaMenu.BreaMenu3}} + {{BreaMenu.BreaMenu4 }}
+			<view>
+				{{item.MenuInfo}}
 			</view>
 			<view class="body-view">
-				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" value="" />
 			</view>
 		</view>
+
 	</view>
-	<view class="food-info">
+	<!-- <view class="food-info">
 		<view>午餐</view>
 		<view class="mune-order">
 			<view class="lunchMune">
@@ -45,7 +45,7 @@
 				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
 			</view>
 		</view>
-	</view>
+	</view> -->
 	<button class="order_btn">点击预定</button>
 	<view class="userinfo">
 		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
