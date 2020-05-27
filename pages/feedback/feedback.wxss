@@ -14,7 +14,7 @@ button {width: 94%;margin: 10rpx auto 0;}
 
 .order_btn {
   width: 90%;margin: 50rpx auto 0;
-  background-color: #902bc3;
+  background-color: var(--themeColor);
   color: #ffffff;
 }
 

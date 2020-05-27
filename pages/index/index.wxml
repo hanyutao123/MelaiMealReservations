@@ -1,8 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-	<cover-image src="../images/index_38.jpg"> </cover-image>
+
+	<head></head>
 	<view class="map_section">
-		<cover-image class="map_icon" src="../images/map.png"> </cover-image>
+		<!-- <cover-image class="map_icon" src="../images/map.png"> </cover-image> -->
+		<text class="iconfont icon-A"></text>
 		<picker bindchange="bindPickerChange" range="{{cityInfo}}" range-key="city_name" value="{{city_id}}">
 			<view class="map_picker">
 				{{cityInfo[city_id].city_name}}
@@ -11,23 +13,16 @@
 	</view>
 	<view class="order_info">
 		<text class="order_info1">配餐说明</text>
-		<text class="order_info2" wx:for="{{noteInfo}}" >
-			<block wx:if="{{ item.show}}">{{item.id}}.{{item.note}}</block> 
+		<text class="order_info2" wx:for="{{noteInfo}}">
+			<block wx:if="{{ item.show}}">{{item.id}}.{{item.note}}</block>
 		</text>
-
-		<navigator url="/pages/order/order">
-			<button class="order_btn">点击预定</button>
-		</navigator>
-
+		<button class="order_btn" bindtap="orderclick">点击预定</button>
 		<view class="nav">
-			<navigator url="/pages/order/order" open-type="redirect" hover-class="other-navigator-hover">我的预定</navigator>
+			<navigator url="/pages/orderlogs/orderlogs">我的预定</navigator>
 			<navigator url="/pages/feedback/feedback">意见反馈</navigator>
 			<navigator url="/pages/detaileddesc/detaileddesc">详细说明</navigator>
-
 		</view>
 	</view>
-	<view class="userinfo">
-		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
-		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-	</view>
+
+	<foot></foot>
 </view>

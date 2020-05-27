@@ -13,7 +13,7 @@ Page({
       },
       {
         city_id: 2,
-        city_name: "海东市"
+        city_name: "北京市"
       },
       {
         city_id: 3,
@@ -41,6 +41,11 @@ Page({
 
     })
   },
+  orderclick:function(){
+    wx.navigateTo({
+      url: '/pages/order/order',
+    })
+  },
 
   
   /**
@@ -50,8 +55,6 @@ Page({
     console.log(),
     wx.request({
       url: appConfig.apiBase + "/noterInfo/",
-      data: {
-      },
       success: (res) => {
         console.log(res.data.noteInfo);
         this.setData({

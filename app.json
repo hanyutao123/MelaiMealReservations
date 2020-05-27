@@ -1,9 +1,10 @@
 {
     "pages": [
-       
+        
         "pages/index/index",
-        "pages/logs/logs",
         "pages/order/order",
+        "pages/orderlogs/orderlogs",
+        "pages/logs/logs",
         "pages/test/test",
         "pages/detaileddesc/detaileddesc",
         "pages/feedback/feedback",
@@ -14,7 +15,7 @@
         "navigationBarBackgroundColor": "#902bc3",
         "navigationBarTitleText": "美莱配餐预定",
         "navigationBarTextStyle": "white"
-    },
+    },    
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

@@ -1,5 +1,6 @@
 <!--logs.wxml-->
 <view class="container log-list">
+	<head></head>
 	<view class="canteen-info">
 		<view class="title"><text>北京美莱饭米粒职工食堂简介</text></view>
 		<view class="cont">
@@ -22,9 +23,6 @@
         </view>
 
 	</view>
-	<view class="userinfo">
-		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
-		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-	</view>
+	<foot></foot>
 
 </view>

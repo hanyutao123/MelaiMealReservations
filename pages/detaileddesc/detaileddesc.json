@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "详细说明",
-  "usingComponents": {}
+  "usingComponents": {
+    "head":"../../components/head/head",
+    "foot":"../../components/foot/foot"
+  }
 }

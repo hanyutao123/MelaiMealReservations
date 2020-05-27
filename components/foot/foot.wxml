@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="MLlogo">
+		<cover-image src="../../images/logo.jpg" class="logo"></cover-image>
+	</view>
+</view>

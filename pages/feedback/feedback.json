@@ -1,7 +1,8 @@
 {
   
   "usingComponents": {
-    
+    "head":"../../components/head/head",
+    "foot":"../../components/foot/foot"
   },
   "navigationBarTitleText": "我要反馈"
 }

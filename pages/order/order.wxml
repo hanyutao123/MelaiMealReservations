@@ -1,5 +1,4 @@
-<!--logs.wxml-->
-<!--index.wxml-->
+
 <view class="container">
 	<view class="header-view">
 		<navigator url="/pages/index/index" class="left-icon">
@@ -18,7 +17,7 @@
 				{{item.MenuInfo}}
 			</view>
 			<view class="body-view">
-				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" value="" />
+				<switch type="checkbox" checked="{{orderstatus}}" bindchange="orderstatuschange" value="" />
 			</view>
 		</view>
 
@@ -47,8 +46,5 @@
 		</view>
 	</view> -->
 	<button class="order_btn">点击预定</button>
-	<view class="userinfo">
-		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
-		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-	</view>
+	<foot></foot>
 </view>

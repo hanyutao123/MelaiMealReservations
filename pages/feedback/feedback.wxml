@@ -1,5 +1,6 @@
 <!--logs.wxml-->
 <view class="container">
+  <head></head>
 	<view class="section">
 		<textarea placeholder="您在预定餐点过程中遇到任何问题，您有什么建议或者想寻求我们的帮助，请您填写反馈信息，以便我们能快速为您解决。" auto-focus />
 		</view>
@@ -9,8 +10,5 @@
         <button bindtap="loadImg">上传图片</button>
     </view>
     <button class="order_btn">提交反馈</button>
-    <view class="userinfo">
-		<cover-image src="../images/logo.jpg" class="logo"></cover-image>
-		<text class="userinfo-nickname">{{userInfo.nickName}}</text>
-	</view>
+    <foot></foot>
 </view>
