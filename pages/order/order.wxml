@@ -2,49 +2,37 @@
 <view class="container">
 	<view class="header-view">
 		<navigator url="/pages/index/index" class="left-icon">
-			<cover-image src="../images/left.png"></cover-image>
+			<!-- <cover-image src="../images/left.png"></cover-image> -->
 		</navigator>
 		<view class="date-view">
-			<cover-image src="../images/date.png" class="date-icon" bindtap='showDatePickerPlus'></cover-image>
+			<!-- <cover-image src="../images/date.png" class="date-icon" bindtap='showDatePickerPlus'></cover-image> -->
 			<view>{{dateInfo}}</view>
 		</view>
 		<datepicker-plus bind:submit='submit' showDatePickerPlus='{{show}}' initDate="2020-05-12"></datepicker-plus>
 	</view>
-	<view class="food-info" wx:for="{{FMLMenu}}">
+	<!-- <view class="food-info" wx:for="{{FMLMenu}}" wx:key="id">
 		<view class="Munetype">{{item.type}}————用餐时间{{item.time}}</view>
 		<view class="mune-order">
-			<view>
+			<view> 
 				{{item.MenuInfo}}
 			</view>
 			<view class="body-view">
-				<switch type="checkbox" checked="{{orderstatus}}" bindchange="orderstatuschange" value="" />
-			</view>
-		</view>
-
-	</view>
-	<!-- <view class="food-info">
-		<view>午餐</view>
-		<view class="mune-order">
-			<view class="lunchMune">
-				{{ LunchMenu.LunchMenu1}} + {{LunchMenu.LunchMenu2}} + {{LunchMenu.LunchMenu3}} + {{LunchMenu.LunchMenu4 }}
-			</view>
-			<view class="body-view">
-				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
-			</view>
-		</view>
-	</view>
-
-	<view class="food-info">
-		<view>晚餐</view>
-		<view class="mune-order">
-			<view class="DinnerMune">
-				{{ DinnerMenu.DinnerMenu1}} + {{DinnerMenu.DinnerMenu2}} 
-			</view>
-			<view class="body-view">
-				<switch type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+				<switch type="checkbox" bindchange="orderstatuschange" :id="1" />
 			</view>
 		</view>
 	</view> -->
-	<button class="order_btn">点击预定</button>
+
+		<checkbox-group bindchange="orderstatuschange" class="food-info">
+			
+			<checkbox wx:for="{{FMLMenu}}" :key="id" value="{{item.id}}">
+				<view class="Munetype">{{item.type}}——用餐时间{{item.time}}</view>
+				<view class="mune-order"> 
+					菜单：{{item.MenuInfo}}
+				</view>
+			</checkbox>
+		</checkbox-group>
+		<button class="order_btn" bindtap="sendOrderInfo">点击预定</button>
+
+	
 	<foot></foot>
 </view>

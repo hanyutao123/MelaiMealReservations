@@ -13,9 +13,12 @@
 	</view>
 	<view class="order_info">
 		<text class="order_info1">配餐说明</text>
-		<text class="order_info2" wx:for="{{noteInfo}}">
-			<block wx:if="{{ item.show}}">{{item.id}}.{{item.note}}</block>
+		<text wx:if="{{city_id==0}}" class="order_info2" wx:for="{{noteInfo}}">
+			<block wx:if="{{item.show}}">{{item.id}}.{{item.note}}</block>
 		</text>
+		<text class="order_info2" :else>当前区域无法订餐</text>
+		
+		
 		<button class="order_btn" bindtap="orderclick">点击预定</button>
 		<view class="nav">
 			<navigator url="/pages/orderlogs/orderlogs">我的预定</navigator>

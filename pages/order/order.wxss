@@ -24,17 +24,18 @@ padding: 30rpx;
 }
 
 
+
 .food-info {
   background-color: #ffffff;
   padding: 60rpx;margin-top: 20rpx;
 }
-.mune-order {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30rpx;
+
+.food-info checkbox{
+  margin-top: 10rpx;
+  border-bottom: 10rpx solid var(--themeColor);
+  width: 100%;
 }
+
 
 .order_btn {
   width: 90%;
@@ -43,21 +44,3 @@ padding: 30rpx;
   color: #ffffff;
 }
 
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50rpx auto 0;
-  background-color: #ffffff;
-  padding: 30rpx 0;
-}
-
-.logo {
-  width: 50%;
-}
-
-.userinfo-nickname {
-  font-size: 16px;
-  line-height: 70rpx;
-  color: #646464;
-}

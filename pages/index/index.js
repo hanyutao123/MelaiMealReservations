@@ -1,7 +1,5 @@
 import * as appConfig from '../../app_config';
-import {
-  request
-} from "../../request/index";
+import {request} from "../../request/index";
 
 Page({
   /**
@@ -40,7 +38,6 @@ Page({
   bindPickerChange: function (e) {
     this.setData({
       city_id: e.detail.value,
-
     })
   },
   orderclick: function () {
@@ -68,14 +65,13 @@ Page({
   getCityList(){
     request({ url: appConfig.apiBase + "/city/"})
     .then(result => {
+      
       this.setData({
         cityInfo: result.data.cityInfo,
       })
       
     })
-    .then((result) => {
-      console.log(result)
-    })
+    
     
   }
 })

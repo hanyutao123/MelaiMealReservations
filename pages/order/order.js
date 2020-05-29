@@ -1,4 +1,5 @@
 import * as appConfig from '../../app_config';
+import {request} from "../../request/index";
 
 Page({
   data: {
@@ -6,34 +7,31 @@ Page({
     dateInfo: '2020-05-15',
     FMLMenu: [],
     Mealtime: Date.now(),
-    orderstatus: false
-  },
-  submit: function (e) {
-
+    orderstatus: false,
+    orderid: 1
   },
   orderstatuschange(e) {
-    console.log(e)
-    let orderstatus = e.detail.value;
+    let orderstatus = e.detail.value.map(Number)[0];
+    let orderinfo = this.data.FMLMenu[orderstatus]
+    console.log(orderinfo)
     this.setData({
       // orderstatus
     })
   },
-
+  getOrderInfo(){
+    request({ url: appConfig.apiBase + "/FMLMenu/"})
+    .then(result => {
+      this.setData({
+        FMLMenu: result.data.FMLMenu,
+      })
+    })
+  },
   showDatePickerPlus: function () {
     this.setData({
       show: true
     })
   },
   onLoad: function () {
-      wx.request({
-        url: appConfig.apiBase + '/FMLMenu',
-        success: (res) => {
-          console.log(res.data.FMLMenu);
-          this.setData({
-            FMLMenu: res.data.FMLMenu,
-          })
-        }
-      })
-      
+    this.getOrderInfo()
   },
 })
