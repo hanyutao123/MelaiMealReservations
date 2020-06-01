@@ -31,8 +31,8 @@ padding: 30rpx;
 }
 
 .food-info checkbox{
-  margin-top: 10rpx;
-  border-bottom: 10rpx solid var(--themeColor);
+  margin: 20rpx auto;
+  /* border-bottom: 10rpx solid var(--themeColor); */
   width: 100%;
 }
 

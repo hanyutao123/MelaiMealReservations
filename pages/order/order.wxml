@@ -24,15 +24,16 @@
 
 		<checkbox-group bindchange="orderstatuschange" class="food-info">
 			
-			<checkbox wx:for="{{FMLMenu}}" :key="id" value="{{item.id}}">
+			<checkbox wx:for="{{FMLMenu}}" :key="id" value="{{item.id}}" checked="{{checked}}">
 				<view class="Munetype">{{item.type}}——用餐时间{{item.time}}</view>
 				<view class="mune-order"> 
 					菜单：{{item.MenuInfo}}
 				</view>
 			</checkbox>
-		</checkbox-group>
-		<button class="order_btn" bindtap="sendOrderInfo">点击预定</button>
+			<button class="order_btn" bindtap="sendOrderInfo">点击预定</button>
 
+		</checkbox-group>
+		
 	
 	<foot></foot>
 </view>
