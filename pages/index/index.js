@@ -6,31 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cityInfo: [
-      // {
-      //   city_id: 1,
-      //   city_name: "邢台市"
-      // },
-      // {
-      //   city_id: 2,
-      //   city_name: "北京市"
-      // },
-      // {
-      //   city_id: 3,
-      //   city_name: "黄山市"
-      // },
-      // {
-      //   city_id: 4,
-      //   city_name: "上海市"
-      // },
-      // {
-      //   city_id: 5,
-      //   city_name: "恩施"
-      // }
-    ],
+    cityInfo: [],
     city_id: 0,
     noteInfo: [],
-
 
   },
 
@@ -38,7 +16,9 @@ Page({
   bindPickerChange: function (e) {
     this.setData({
       city_id: e.detail.value,
+      
     })
+    console.log(e.detail.value)
   },
   orderclick: function () {
     wx.navigateTo({
@@ -65,13 +45,9 @@ Page({
   getCityList(){
     request({ url: appConfig.apiBase + "/city/"})
     .then(result => {
-      
       this.setData({
         cityInfo: result.data.cityInfo,
-      })
-      
+      })   
     })
-    
-    
   }
 })

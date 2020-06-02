@@ -33,6 +33,11 @@ Page({
     }else{
       wx:wx.navigateTo({
         url: '/pages/orderlogs/orderlogs',
+      }),
+      request({
+        url:appConfig.apiBase + "/addorder/"
+      }).then(result => {
+        console.log(result)
       })
     }
 

@@ -16,11 +16,11 @@
 		<text wx:if="{{city_id==0}}" class="order_info2" wx:for="{{noteInfo}}">
 			<block wx:if="{{item.show}}">{{item.id}}.{{item.note}}</block>
 		</text>
-		<text class="order_info2" :else>当前区域无法订餐</text>
+		<text class="order_info2" wx:if="{{!city_id==0}}">当前区域暂未支持订餐</text>
 		
 		
-		<button class="order_btn" bindtap="orderclick">点击预定</button>
-		<view class="nav">
+		<button disabled="{{city_id==0?false:true}}" class="order_btn" bindtap="orderclick">点击预定</button>
+		<view class="nav" wx:if="{{city_id==0?true:false}}">
 			<navigator url="/pages/orderlogs/orderlogs">我的预定</navigator>
 			<navigator url="/pages/feedback/feedback">意见反馈</navigator>
 			<navigator url="/pages/detaileddesc/detaileddesc">详细说明</navigator>
