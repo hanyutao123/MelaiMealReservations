@@ -31,7 +31,7 @@ Page({
       })
       return false
     }else{
-      wx:wx.navigateTo({
+      wx.navigateTo({
         url: '/pages/orderlogs/orderlogs',
       }),
       request({
@@ -45,7 +45,7 @@ Page({
   },
   getOrderInfo() {
     request({
-        url: appConfig.apiBase + "/FMLMenu/"
+        url: appConfig.apiBase + "FMLMenu/"
       })
       .then(result => {
         this.setData({

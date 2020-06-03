@@ -35,7 +35,7 @@ Page({
     this.getCityList();
   },
   getNoteinfo(){
-    request({ url: appConfig.apiBase + "/noterInfo/"})
+    request({ url: appConfig.apiBase + "noterInfo/"})
     .then(result => {
       this.setData({
         noteInfo: result.data.noteInfo,
@@ -43,7 +43,7 @@ Page({
     })
   },
   getCityList(){
-    request({ url: appConfig.apiBase + "/city/"})
+    request({ url: appConfig.apiBase + "city/"})
     .then(result => {
       this.setData({
         cityInfo: result.data.cityInfo,
